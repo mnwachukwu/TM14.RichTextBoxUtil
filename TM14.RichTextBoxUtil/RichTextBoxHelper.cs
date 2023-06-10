@@ -68,13 +68,19 @@ namespace TM14.RichTextBoxUtil
                         {
                             if (i == 1)
                             {
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             if (i == ss.Length - 1)
                             {
                                 underlineFormattingActive = !underlineFormattingActive;
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             richTextBox.AppendText(ss[i]);
@@ -83,7 +89,9 @@ namespace TM14.RichTextBoxUtil
                     else
                     {
                         richTextBox.AppendText(ss[0]);
-                        richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                        richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                            DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive,
+                                strikeThroughFormattingActive, underlineFormattingActive));
                         richTextBox.AppendText(ss[1]);
                     }
 
@@ -102,13 +110,19 @@ namespace TM14.RichTextBoxUtil
                         {
                             if (i == 1)
                             {
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             if (i == ss.Length - 1)
                             {
                                 italicBoldFormattingActive = !italicBoldFormattingActive;
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             richTextBox.AppendText(ss[i]);
@@ -117,7 +131,9 @@ namespace TM14.RichTextBoxUtil
                     else
                     {
                         richTextBox.AppendText(ss[0]);
-                        richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                        richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                            DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive,
+                                strikeThroughFormattingActive, underlineFormattingActive));
                         richTextBox.AppendText(ss[1]);
                     }
                     
@@ -136,13 +152,19 @@ namespace TM14.RichTextBoxUtil
                         {
                             if (i == 1)
                             {
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             if (i == ss.Length - 1)
                             {
                                 boldFormattingActive = !boldFormattingActive;
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             richTextBox.AppendText(ss[i]);
@@ -151,7 +173,7 @@ namespace TM14.RichTextBoxUtil
                     else
                     {
                         richTextBox.AppendText(ss[0]);
-                        richTextBox.SelectionFont = new(richTextBox.Font,
+                        richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
                             DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive,
                                 strikeThroughFormattingActive, underlineFormattingActive));
                         richTextBox.AppendText(ss[1]);
@@ -172,13 +194,19 @@ namespace TM14.RichTextBoxUtil
                         {
                             if (i == 1)
                             {
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             if (i == ss.Length - 1)
                             {
                                 italicFormattingActive = !italicFormattingActive;
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             richTextBox.AppendText(ss[i]);
@@ -187,7 +215,7 @@ namespace TM14.RichTextBoxUtil
                     else
                     {
                         richTextBox.AppendText(ss[0]);
-                        richTextBox.SelectionFont = new(richTextBox.Font,
+                        richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
                             DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive,
                                 strikeThroughFormattingActive, underlineFormattingActive));
                         richTextBox.AppendText(ss[1]);
@@ -208,13 +236,19 @@ namespace TM14.RichTextBoxUtil
                         {
                             if (i == 1)
                             {
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             if (i == ss.Length - 1)
                             {
                                 strikeThroughFormattingActive = !strikeThroughFormattingActive;
-                                richTextBox.SelectionFont = new(richTextBox.Font, DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive, strikeThroughFormattingActive, underlineFormattingActive));
+                                richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
+                                    DetermineFontStyle(italicFormattingActive, boldFormattingActive,
+                                        italicBoldFormattingActive, strikeThroughFormattingActive,
+                                        underlineFormattingActive));
                             }
 
                             richTextBox.AppendText(ss[i]);
@@ -223,7 +257,7 @@ namespace TM14.RichTextBoxUtil
                     else
                     {
                         richTextBox.AppendText(ss[0]);
-                        richTextBox.SelectionFont = new(richTextBox.Font,
+                        richTextBox.SelectionFont = new(richTextBox.Font.FontFamily, size,
                             DetermineFontStyle(italicFormattingActive, boldFormattingActive, italicBoldFormattingActive,
                                 strikeThroughFormattingActive, underlineFormattingActive));
                         richTextBox.AppendText(ss[1]);
