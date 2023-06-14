@@ -9,9 +9,9 @@ namespace TM14.RichTextBoxUtil
     public static class RichTextBoxHelper
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
-        public const int WmVscroll = 277; // Vertical scroll
-        public const int SbBottom = 7; // Scroll to bottom
+        private static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
+        private const int WmVscroll = 277; // Vertical scroll
+        private const int SbBottom = 7; // Scroll to bottom
 
         public static void AppendText(this RichTextBox richTextBox, string text, Color color, float size, bool showTimeStamp = false)
         {
@@ -30,7 +30,7 @@ namespace TM14.RichTextBoxUtil
             if (text == null)
             {
                 richTextBox.AppendText(Environment.NewLine);
-                richTextBox.ScrollRichTextBox();
+                richTextBox.ScrollRichTextBoxToBottom();
                 return;
             }
 
@@ -272,7 +272,7 @@ namespace TM14.RichTextBoxUtil
             }
 
             richTextBox.AppendText(Environment.NewLine);
-            richTextBox.ScrollRichTextBox();
+            richTextBox.ScrollRichTextBoxToBottom();
         }
 
         private static FontStyle DetermineFontStyle(bool italicFormattingActive, bool boldFormattingActive, bool italicBoldFormattingActive, bool strikeThroughFormattingActive, bool underlineFormattingActive)
@@ -309,7 +309,7 @@ namespace TM14.RichTextBoxUtil
             return style;
         }
 
-        private static void ScrollRichTextBox(this RichTextBox richTextBox)
+        public static void ScrollRichTextBoxToBottom(this RichTextBox richTextBox)
         {
             if (richTextBox == null || richTextBox.IsDisposed || richTextBox.Disposing)
             {
@@ -332,6 +332,11 @@ namespace TM14.RichTextBoxUtil
         public static bool ContainsOnlyUnderscores(this string text)
         {
             return text.All(t => t == '_');
+        }
+
+        public static bool ContainsOnlySpaces(string text)
+        {
+            return text.All(t => t == ' ');
         }
     }
 }
