@@ -11,6 +11,7 @@ namespace TM14.RichTextBoxUtil
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
         private const int WmVscroll = 277; // Vertical scroll
+        private const int SbTop = 6;
         private const int SbBottom = 7; // Scroll to bottom
 
         public static void AppendText(this RichTextBox richTextBox)
@@ -324,6 +325,16 @@ namespace TM14.RichTextBoxUtil
             }
 
             SendMessage(richTextBox.Handle, WmVscroll, (IntPtr)SbBottom, IntPtr.Zero);
+        }
+
+        public static void ScrollRichTextBoxToTop(this RichTextBox richTextBox)
+        {
+            if (richTextBox == null || richTextBox.IsDisposed || richTextBox.Disposing)
+            {
+                return;
+            }
+
+            SendMessage(richTextBox.Handle, WmVscroll, (IntPtr)SbTop, IntPtr.Zero);
         }
 
         public static bool ContainsOnlyAsterisks(this string text)
