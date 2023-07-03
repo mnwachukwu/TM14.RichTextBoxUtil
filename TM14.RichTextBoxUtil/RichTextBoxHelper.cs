@@ -13,13 +13,20 @@ namespace TM14.RichTextBoxUtil
         private const int WmVscroll = 277; // Vertical scroll
         private const int SbBottom = 7; // Scroll to bottom
 
-        public static void AppendText(this RichTextBox richTextBox, string text, Color color, float size, bool showTimeStamp = false)
+        public static void AppendText(this RichTextBox richTextBox)
+        {
+            richTextBox.AppendText(Environment.NewLine);
+            richTextBox.ScrollRichTextBoxToBottom();
+        }
+
+        public static void AppendText(this RichTextBox richTextBox, string text, Color color, float? fontSize = null, bool showTimeStamp = false)
         {
             var italicFormattingActive = false;
             var boldFormattingActive = false;
             var italicBoldFormattingActive = false;
             var strikeThroughFormattingActive = false;
             var underlineFormattingActive = false;
+            var size = fontSize ?? richTextBox.Font.Size;
 
             richTextBox.SelectionStart = richTextBox.TextLength;
             richTextBox.SelectionLength = 0;
